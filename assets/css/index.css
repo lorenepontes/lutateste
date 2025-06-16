@@ -1,0 +1,108 @@
+:root {
+  --cor-preto-primario: #131313;
+  --cor-vermelho-primario: #cb161f;
+  --cor-vermelho-segundario: #e00814;
+  --cor-branco-primario: #f1f1f1;
+  --cor-cinza-primario: #dbdbdb;
+  --cor-amarelo-primario: #fcba03;
+  --cor-verde-primario: #0da03c;
+  --cor-azul-primario: #0b73c9;
+  --fonte-menu: "Bebas Neue", sans-serif;
+  --fonte-textos: "Barlow", sans-serif;
+  --fonte-botoes: "Barlow", sans-serif;
+}
+
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
+/* --- GERAL & FONTES --- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* background: linear-gradient(to right, #e00814 50%, #0b73c9 50%); */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- CABEÇALHO --- */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: rgba(200, 200, 200, 0.8);
+  border-radius: 8px;
+  position: relative;
+}
+
+.header-item {
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.header-item.mode {
+  background-color: #5a67d8;
+  color: white;
+}
+.header-item.mode.active {
+  background-color: #cb161f;
+}
+.header-item.external-panel.active {
+  display: flex;
+  background-color: #0da03c;
+  color: white;
+}
+
+.header-item.external-panel {
+  background-color: #6c757d;
+  color: white;
+}
+#area-number {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 30px;
+}
+#live-clock {
+  position: absolute;
+  right: 15px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.header-item.mode:hover {
+  border: 2px solid #747171;
+}
+
+.external-panel:hover {
+  border: 2px solid #747171;
+}
+
+.logo-geral {
+  display: flex;
+  height: 73%;
+  width: 88%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 1rem 4.6rem;
+}

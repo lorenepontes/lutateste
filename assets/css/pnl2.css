@@ -1,0 +1,168 @@
+#pnl-kata {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding: 350px; */
+  background-color: rgba(200, 200, 200, 0.8);
+  position: absolute;
+  height: 83%;
+  width: 98%;
+  border-radius: 5px;
+  color: white;
+}
+
+.container {
+  width: 95%;
+  height: 87%;
+  /* max-width: 1000px; */
+  margin: 1rem auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+.controls,
+.actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 8px;
+  background-color: rgba(200, 200, 200, 0.8);
+}
+
+.control-group {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  gap: 10px;
+}
+
+.subTitle {
+  /* width: 100%; */
+  font-size: 50em;
+  color: var(--cor-preto-primario);
+  font-size: 20px;
+  font-weight: 700;
+}
+#quantidade-atletas {
+  /* padding: 10px; */
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.5em;
+}
+
+.qtdAtleta {
+  width: 10%;
+}
+
+#categoria {
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.catAtleta {
+  width: 37rem;
+}
+
+.btn-kata.mode {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5a67d8;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-kata.mode.active {
+  background-color: #cb161f;
+}
+
+.btn-kata.mode:hover {
+  border: 2px solid #747171;
+  /* background-color: #434190; */
+}
+
+/* começa a tabela */
+#tabela-container {
+  overflow-x: auto; /* Mantém a rolagem horizontal que você já tinha */
+
+  /* --- Adicione estas duas linhas --- */
+  max-height: 355px; /* Defina a altura máxima que desejar */
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: var(--cor-preto-primario);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+thead {
+  background-color: #edf2f7;
+}
+
+td input {
+  width: 90%;
+  border: none;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 5px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+td input:focus {
+  outline: 1px solid #5a67d8;
+  border-radius: 3px;
+}
+
+.total-cell {
+  background-color: #e6f3e6;
+  color: var(--cor-preto-primario);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.discarded-note {
+  color: red;
+  text-decoration: line-through;
+}
+
+.placement-cell {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--cor-preto-primario);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gold {
+  background: linear-gradient(135deg, #ffd700, #f0c400);
+}
+.silver {
+  background: linear-gradient(135deg, #c0c0c0, #a9a9a9);
+}
+.bronze {
+  background: linear-gradient(135deg, #cd7f32, #a0522d);
+}

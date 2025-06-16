@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar Karate</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/pnl1.css">
+    <link rel="stylesheet" href="assets/css/pnl2.css">
+    <link rel="stylesheet" href="assets/css/kumite.css">
+  
+<body>
+     <header>
+        <div class="header-item"><input type="number" id="area-number" value="1" min="1"></div>
+        <div class="header-item mode active" id="button-kumite">KUMITE</div>
+        <div class="header-item external-panel active" id="gerar-kumite">Painel Externo KUMITE</div>
+        <div class="header-item mode" id="button-kata">KATA</div>        
+        <div class="header-item external-panel "  id="gerar-espelho">Painel Externo KATA</div>
+        <div id="live-clock" class="header-item">15:33:41</div>
+    </header>
+
+               <div>
+                 <img src="assets/images/logo.jpeg" alt="" srcset="" class="logo-geral">            
+               </div> 
+         
+          <div class="container-kumite  painel" id="pnl-kumite">
+            <div class="atleta-red">
+              <div class="container-red">                            
+                              <!-- AKA (Competidor Vermelho) -->
+                      <div class="competitor-panel aka">
+                           <div class="nome-red"><input type="text" id="nomeAtl-red" placeholder="Nome Atleta" maxlength="15" ></div>
+                            <hr>
+                           <div class="total-points">
+                              <!-- <span>Pontos</span> -->
+                              <span id="aka-points">0</span>
+                          </div>
+                          <div class="score-box">
+                               
+                              <div class="score-controls">
+                                <label class="ganb">--</label>
+                                <label>IPPON</label>                                
+                                  <button class="btn-minus" data-target="aka-ippon">-</button>
+                                  <span class="score-value" id="aka-ippon">0</span>
+                                  <button class="btn-plus" data-target="aka-ippon">+</button>
+                              </div>
+                             
+                          </div>
+                          <div class="score-box">
+                             
+                              <div class="score-controls">
+                                 <label>WAZAARI</label>
+                                  <button class="btn-minus" data-target="aka-wazaari">-</button>
+                                  <span class="score-value" id="aka-wazaari">0</span>
+                                  <button class="btn-plus" data-target="aka-wazaari">+</button>
+                              </div>
+                              
+                          </div>
+                         
+                          <div class="penalties">
+                             <label style="font-weight: 700;">PENALIDADES H HC K</label>
+                             
+                              <div class="penalty-row">
+                                   <hr>
+                                  <label>HANSOKU</label>
+                                  <input type="checkbox" id="phred1"> <input type="checkbox" id="phred2"> <input type="checkbox" id="phred3">
+                              </div>
+                              <div class="penalty-row">
+                                  <hr>
+                                  <label>JOGAI</label>
+                                  <input type="checkbox" id="jored1"> <input type="checkbox" id="jored2"> <input type="checkbox" id="jored3">
+                              </div>
+                              <div class="penalty-row">
+                                <hr>
+                                  <label>MUBOBI</label>                      
+                                  <input type="checkbox" id="mured1"> <input type="checkbox" id="mured2"> <input type="checkbox" id="mured3">
+                              </div>
+                          </div>
+                      </div>
+        
+
+
+              </div>
+
+
+             
+            </div>
+
+            <div class="center-panel">
+              
+              <input type="time" class="time-insert" id="fight-time" value="01:00">
+              <div class="timer-display" id="main-timer"></div>
+              <!-- <div class="timer-display" id="main-timer">1:10</div> -->
+                <!-- <input type="time" class="time-insert" id="fight-time" step="1800"  required > -->
+              
+                <button id="start-stop-btn">INICIAR</button>
+             <div>
+                 <img src="assets/images/logo.jpeg" alt="" srcset="" class="logo">            
+             </div>             
+            </div>
+
+            <div id="center-control">
+              <div class="btn-item mode" id="reset-scoreboard-btn">Zera Placar</div>
+              <div class="btn-item mode" id="reset-timer-btn">Editar Tempo</div>
+            </div>
+
+
+      <div class="atleta-blue">
+                   <!-- SHIRO (Competidor Azul/Branco) -->
+        <div class="container-blue">              
+         <div class="competitor-panel shiro">
+             <div class="nome-blue"><input type="text" id="nomeAtl-blue" placeholder="Nome Atleta" maxlength="15" ></div>
+             <hr>
+                 <div class="total-points">
+                   <!-- <span>Pontos</span> -->
+                   <span id="shiro-points">0</span>
+                 </div>
+            <div class="score-box">
+               <label class="ganb">---</label>
+                 <label>IPPON</label>
+                
+                <div class="score-controls">
+                    <button class="btn-minus" data-target="shiro-ippon">-</button>
+                    <span class="score-value" id="shiro-ippon">0</span>
+                    <button class="btn-plus" data-target="shiro-ippon">+</button>
+                </div>
+               
+            </div>
+            <div class="score-box">
+                <label>WAZAARI</label>                
+                <div class="score-controls">
+                    <button class="btn-minus" data-target="shiro-wazaari">-</button>
+                    <span class="score-value" id="shiro-wazaari">0</span>
+                    <button class="btn-plus" data-target="shiro-wazaari">+</button>
+                </div>
+                
+            </div>
+            
+            <div class="penalties">
+              <label style="font-weight: 700;">PENALIDADES H HC K</label>
+                <div class="penalty-row">
+                    <hr>
+                    <label>HANSOKU</label>
+                    <input type="checkbox" id="phblue1"> <input type="checkbox" id="phblue2"> <input type="checkbox" id="phblue3">
+                </div>
+                <div class="penalty-row">
+                    <hr>
+                    <label>JOGAI</label>
+                    <input type="checkbox" id="joblue1"> <input type="checkbox" id="joblue2"> <input type="checkbox" id="joblue3">
+                </div>
+                 <div class="penalty-row">
+                  <hr>
+                    <label>MUBOBI</label>                      
+                    <input type="checkbox" id="mublue1"> <input type="checkbox" id="mublue2"> <input type="checkbox" id="mublue3">
+                </div>
+            </div>
+            </div>
+          </div>
+       </div>
+
+      </div>
+
+       <div class="container-kata  painel" id="pnl-kata">
+         <div class="container">
+        <h1>Sistema de Pontuação de Kata</h1>
+
+        <div class="controls">
+           <div class="control-group">
+                <label for="categoria" class="subTitle">Categoria:</label>
+                <input type="text" id="categoria" class="catAtleta" placeholder="Ex: Kata Individual Masculino">
+            </div>
+            <div class="control-group">
+                <label for="quantidade-atletas" class="subTitle">Quantidade de Atletas:</label>
+                <input type="number" id="quantidade-atletas" class="qtdAtleta" value="1" min="1">
+                <button id="gerar-linhas" class="btn-kata mode ">Gerar Linhas</button>
+            </div>
+           
+        </div>
+
+        <div id="tabela-container">
+            <!-- A tabela será gerada aqui pelo JavaScript -->
+        </div>             
+
+        <div class="actions">
+            <button id="limpar-tabela" class="btn-kata mode">Limpar Tudo</button>
+            <button id="exportar-txt" class="btn-kata mode">Gerar Relatório (.txt)</button>
+        </div>
+    </div>
+       </div>
+
+    
+   
+
+ <script src="assets/js/index.js"></script>
+ <script src="assets/js/pnl1.js"></script>
+ <script src="assets/js/pnl2.js"></script>
+
+
+
+ <!-- <script src="assets/js/placar_figth.js"></script> -->
+ 
+  
+</body>
+
+</html>

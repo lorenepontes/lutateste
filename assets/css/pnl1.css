@@ -1,0 +1,144 @@
+#pnl-kumite {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* padding: 350px; */
+  background-color: rgba(200, 200, 200, 0.8);
+  position: absolute;
+  height: 83%;
+  width: 98%;
+  border-radius: 5px;
+  color: white;
+  display: none;
+}
+
+.atleta-red {
+  display: flex;
+  width: 45%;
+  height: 35rem;
+  background-color: #d90429;
+  position: static;
+  border-radius: 4px;
+}
+
+.atleta-blue {
+  display: flex;
+  width: 45%;
+  height: 35rem;
+  background-color: #0088cc;
+  position: static;
+  border-radius: 4px;
+}
+
+.center-panel {
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  width: 250px;
+  height: 400px;
+  position: fixed;
+  border: 3px solid #747171;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.time-insert {
+  display: flex;
+  width: 15.2rem;
+  height: 7rem;
+  font-size: 6em;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #333;
+  justify-content: center;
+  justify-items: center;
+  padding: 0.5rem 0;
+}
+
+.timer-display {
+  display: none;
+  width: 15.2rem;
+  height: 7rem;
+  font-size: 6em;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #333;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#start-stop-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.8em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cor-verde-primario);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#start-stop-btn.running {
+  background-color: #dc3545;
+}
+
+.logo {
+  /* display: flex; */
+  width: 240px;
+  height: 160px;
+  /* position: fixed; */
+  border: 3px solid #747171;
+}
+
+#center-control {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  justify-items: center;
+  width: 250px;
+  height: 50px;
+  border: 3px solid #747171;
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  margin-top: 30rem;
+}
+
+.btn-item.mode {
+  display: flex;
+  width: 200px;
+  height: 17px;
+  padding: 8px 0px;
+  justify-content: center;
+  justify-items: center;
+  margin: 7px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #add8e6;
+}
+
+.btn-item.mode:hover {
+  border: 2px solid #747171;
+}
+
+#start-stop-btn:hover {
+  border: 2px solid #747171;
+}
+
+/* Esconde o ícone de relógio/calendário no Chrome, Safari, Edge */
+.time-insert::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Esconde o botão de limpar (o 'x') que aparece em alguns navegadores */
+.time-insert::-webkit-clear-button {
+  display: none;
+}
+
+/* Esconde as setas de incremento/decremento */
+.time-insert::-webkit-inner-spin-button {
+  display: none;
+}
