@@ -14,6 +14,13 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.area {
+  font-size: 100px;
+  color: aliceblue;
+  background-color: black;
+  padding: 0 2rem;
+  border-radius: 8px;
+}
 
 .titulo-kata {
   display: flex;
