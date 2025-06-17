@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnKata: document.getElementById("button-kata"),
     btnexternokata: document.getElementById("gerar-espelho"),
     btnexternokumite: document.getElementById("gerar-kumite"),
+    logoindex: document.getElementById("logogeral"),
   };
 
   function updateLiveClock() {
@@ -37,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
       elements.btnexternokata.style.display = "none";
       elements.btnexternokumite.style.display = "flex";
       elements.btnexternokumite.classList.add("active");
+      //esconde logo
+      elements.logoindex.style.display = "none";
     } else if (panelToShow === "kata") {
       elements.pnlKata.style.display = "flex";
       elements.btnKata.classList.add("active");
@@ -44,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
       elements.btnexternokata.style.display = "flex";
       elements.btnexternokata.classList.add("active");
       elements.btnexternokumite.style.display = "none";
+      //esconde logo
+      elements.logoindex.style.display = "none";
     }
   }
 
