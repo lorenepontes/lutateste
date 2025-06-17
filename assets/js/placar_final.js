@@ -82,4 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // RENDERIZAÇÃO INICIAL: Desenha a tabela quando a página é carregada pela primeira vez
   renderizarPlacar();
-});
+  
+  // 2. Função para atualizar o texto da área na tela
+  function updateAreaDisplay(state) {
+    // Se não houver dados ou a área não estiver definida, mostra um valor padrão
+    if (!state || !state.area) {
+      areaDisplayElement.textContent = "Área: -";
+      return;
+    }
+    // Atualiza o elemento com o número da área vindo do localStorage
+    areaDisplayElement.textContent = state.area;
+  }
+
+  // 3. Leitura Inicial: Ao abrir a página, busca o último estado salvo
+  const initialStateString = localStorage.getItem("karatePlacarState");
+  if (initialStateString) {
+    const initialState = JSON.parse(initialStateString);
+    updateAreaDisplay(initialState);
+  }
+
+  // 4. Escuta por Mudanças: Fica esperando por atualizações do painel de controle
+  window.addEventListener("storage", (event) => {
+    // Verifica se a atualização foi na chave que nos interessa
+    if (event.key === "karatePlacarState") {
+      const newState = JSON.parse(event.newValue);
+      updateAreaDisplay(newState);
+    }
+  });
+
