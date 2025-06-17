@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoriaTitulo = document.getElementById("categoria-titulo");
   const resultadoContainer = document.getElementById("resultado-container");
   const dataGeracaoSpan = document.getElementById("data-geracao");
+  const areaDisplayElement = document.getElementById("area-resultado");
 
   // FUNÇÃO PRINCIPAL PARA DESENHAR/ATUALIZAR A TABELA
   const renderizarPlacar = () => {
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // RENDERIZAÇÃO INICIAL: Desenha a tabela quando a página é carregada pela primeira vez
   renderizarPlacar();
-  
+
   // 2. Função para atualizar o texto da área na tela
   function updateAreaDisplay(state) {
     // Se não houver dados ou a área não estiver definida, mostra um valor padrão
@@ -109,6 +110,4 @@ document.addEventListener("DOMContentLoaded", () => {
       updateAreaDisplay(newState);
     }
   });
-
-  });
-
+});
