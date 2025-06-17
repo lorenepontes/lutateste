@@ -59,11 +59,13 @@
 }
 
 .p-jogaiblue {
-  padding: 0 3.6rem;
+  width: 80.8%;
+  margin-left: 3.68rem;
 }
 
 .p-mubobiblue {
-  padding: 0 1.5rem;
+  width: 92.5%;
+  margin-left: 1.5rem;
 }
 
 .ph1-blue,
@@ -81,6 +83,7 @@
   /* A primeira cor está no centro, a segunda nas bordas */
   background: radial-gradient(circle, #f7971e, #ffd200);
   margin-left: 1rem;
+  padding: 0 0;
 }
 
 /* time */
@@ -165,11 +168,13 @@
 }
 
 .p-jogaired {
-  padding: 0 3.6rem;
+  width: 81%;
+  margin-left: 3.68rem;
 }
 
 .p-mubobired {
-  padding: 0 1.5rem;
+  width: 92.8%;
+  margin-left: 1.5rem;
 }
 
 .ph1-red,
