@@ -216,7 +216,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dê um nome à janela para evitar abrir múltiplas abas
   };
 
-  gerarEspelhoBtn.addEventListener("click", abrirPaginaEspelho);
+  if (gerarLinhasBtn) {
+    // 2. Adiciona o "ouvinte" para o evento de clique
+    gerarLinhasBtn.addEventListener("click", () => {
+      // 3. O código aqui dentro será executado toda vez que o botão for clicado
+      //console.log("O botão foi clicado!");
+      exportarParaPaginaEspelho();
+    });
+  } else {
+    console.error('Botão com id "meuBotao" não encontrado!');
+  }
 
   // FUNÇÃO PARA PREPARAR E EXPORTAR DADOS PARA A PÁGINA ESPELHO
   const exportarParaPaginaEspelho = () => {
@@ -228,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const categoria = categoriaInput.value || "Categoria Não Definida";
     const atletasParaExportar = [];
+    gerarEspelhoBtn.addEventListener("click", abrirPaginaEspelho);
 
     rows.forEach((row) => {
       const nome = row.querySelector(".atleta-nome").value || "Atleta S/ Nome";
